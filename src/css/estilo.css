@@ -1,17 +1,87 @@
-/* Estilo básico para o corpo da página */
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1: #f9f4f4;
+    --color2: #d60000;
+}
+html{
+     scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background: var(--color1);
     color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
     margin: 0;
+    font-family: Inter Tight;
+}
+#logo{
+    position: absolute;
+    width: 140px;
+    top: 10px;
+    left: 20px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background: #000;
+}
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+#navegacaoMain{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.menu{
+    color: var(--color2);
+    padding: 5px;
+    font-size: 1.1rem;
+}
+.menu {
+    color: var(--color2);
+    font-size: 1.3rem;
+    padding: 10px;
+    text-decoration: none;
+    transition: ease;
+    font-family: var(--inter);
 }
 
+.menu:hover {
+    text-shadow: 2px 3px 2px #464646;
+}
+
+.menu-header {
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.menu-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color2);
+}
+
+.menu-header:hover::after {
+    transition: width 0.5s ease;
+    width: 100%;
+}
+
+.menu-header:hover {
+    transform: scale(1.05);
+    border-radius: 15%;
+}
 /* Estilo para o título principal */
-h1 {
+.titulo1 {
     color: #000;
     margin-bottom: 30px;
     border-bottom: 2px solid #007bff;
