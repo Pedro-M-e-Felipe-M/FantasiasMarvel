@@ -6,8 +6,9 @@
     box-sizing: border-box;
 }
 :root{
-    --color1: #f9f4f4;
+    --color1: #ffeded;
     --color2: #d60000;
+    --color3: #ff5959;
 }
 html{
      scroll-behavior: smooth;
@@ -39,7 +40,7 @@ header nav ul {
 }
 
 .menu {
-    color: #fff;
+    color: var(--color1);
     font-size: 1.3rem;
     padding: 10px;
     text-decoration: none;
@@ -75,6 +76,48 @@ header nav ul {
     transform: scale(1.05);
     border-radius: 15%;
 }
+.banner {
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 30px var(--color3);
+    z-index: 1;
+    background-repeat: no-repeat; 
+    transition: background-image 0.5s ease-in-out;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+#banner-conteudo{
+    color: #fff;
+    z-index: 3;
+    text-align: center;
+    font-family: var(--inter);
+}
+#banner-conteudo h2{
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+#banner-conteudo h3{
+    font-size: 3rem;
+    padding-bottom: 25px;
+}
+#banner-conteudo p{
+    font-size: 1.2rem;
+}
+
+
 /* Estilo para o título principal */
 .titulo1 {
     color: #000;
@@ -82,32 +125,64 @@ header nav ul {
     border-bottom: 2px solid #007bff;
     padding-bottom: 10px;
 }
+#titulo-fantasias{
+    text-align: center;
+    color: var(--color2);
+    padding: 75px;
+}
 #fantasias{
     display: flex;
     justify-content: center;
 }
 
 .card{
-    width: 200px;
-    height: 350px;
-    margin: 30px;
-    background: white;
-    box-shadow: 0 0 25px #000;
+    width: 250px;
+    height: 400px;
+    margin: 20px;
+    background: rgb(137, 137, 137);
+    box-shadow: 0 0 20px -3px rgb(0, 0, 0, 0.8);
     border-radius: 50px;
     text-align: center;
 }
-.cardNome{
-    font-size: 1.2rem;
+
+.cardHr{
+    background: var(--color3);
+    width: 95%;
     position: relative;
+    top: 25px;
+    margin: 0 auto;
+    border: none;
+    height: 1.5px;
+    border-radius: 2px;
+}
+
+.cardNome{
+    font-size: 1.1rem;
+    position: relative;
+    top: 30px;
+    color: white;
+}
+
+.cardPreco{
+    position: relative;
+    top: 35px;
+    
+}
+.cardDesc{
+    position: relative;
+    top: 40px;
 }
 .card img{
-    width: 90%;
-    height: 150px;
+    width: 85%;
+    height: 200px;
     border-radius: 25px;
     margin: 0 auto;
     position: relative;
     top: 30px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    top: 20px;
 }
+
 
 /* Estilo para o campo de entrada e o label */
 label {
