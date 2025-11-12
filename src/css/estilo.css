@@ -197,7 +197,8 @@ header nav ul {
 .cardDesc{
     position: relative;
     top: 45px;
-
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .card img{
     width: 100%;
