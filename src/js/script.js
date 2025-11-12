@@ -40,22 +40,22 @@ function removeTarefa() {
 // CRIANDO UM ARRAY DE OBJETO COM AS IMG E INFORMAÇOES DO BANNE
 const bannerItems =[
     {
-        imagem:"./src/assets/cardImg6.jpeg",
+        imagem:"./src/assets/slideshow4.png",
         titulo:"R$108,00",
         descricao:"Fantasia Infantil Homem Formiga",
     },
     {
-        imagem:"./src/assets/cardImg4.jpeg",
+        imagem:"./src/assets/slideshow3.png",
         titulo: "R$250,00",
         descricao:"Fantasia Hulk Infantil",
     },
     {
-        imagem:"./src/assets/cardImg2.jpeg",
+        imagem:"./src/assets/slideshow2.png",
         titulo:"R$153,00",
         descricao:"Fantasia Adulto Mulher Aranha",
     },
     {
-        imagem:"./src/assets/cardImg1.jpeg",
+        imagem:"./src/assets/slideshow1.png",
         titulo:"R$255,00",
         descricao:"Fantasia Adulto Thor Masculino",
     }
