@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -8,22 +7,35 @@
 :root{
     --color1: #ffeded;
     --color2: #d60000;
-    --color3: #ff5959;
+    --color3: #ff1f1f;
 }
 html{
      scroll-behavior: smooth;
 }
 body {
-    font-family: Arial, sans-serif;
-    background: var(--color1);
-    margin: 0;
+    background: #f8f8f8;
     font-family: Inter Tight;
+    color: #333;
+}
+#bodyTarefas{
+    background: #f4f4f9;
+}
+#container{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
 }
 #logo{
     position: absolute;
     width: 140px;
     top: 10px;
-    left: 20px;
+    left: 40px;
 }
 header{
     display: flex;
@@ -84,7 +96,7 @@ header nav ul {
     justify-content: center;
     align-items: center;
     position: relative;
-    box-shadow: 0 0 30px var(--color3);
+    box-shadow: 0 0 30px rgb(255, 31, 31, 0.9);
     z-index: 1;
     background-repeat: no-repeat; 
     transition: background-image 0.5s ease-in-out;
@@ -119,72 +131,143 @@ header nav ul {
 
 
 /* Estilo para o título principal */
-.titulo1 {
-    color: #000;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-}
+
 #titulo-fantasias{
     text-align: center;
     color: var(--color2);
     padding: 75px;
+    font-family: cursive;
+    font-size: 2.5rem;
 }
 #fantasias{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .card{
-    width: 250px;
-    height: 400px;
-    margin: 20px;
-    background: rgb(137, 137, 137);
-    box-shadow: 0 0 20px -3px rgb(0, 0, 0, 0.8);
-    border-radius: 50px;
+    width: 400px;
+    height: 360px;
+    background: #f8f8f8;
+    box-shadow: 0 0 20px -3px rgba(128, 128, 128, 0.8);
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .cardHr{
-    background: var(--color3);
-    width: 95%;
     position: relative;
-    top: 25px;
-    margin: 0 auto;
+    width: 95%;
+    background: #c82333;
+    height: 2px;
     border: none;
-    height: 1.5px;
-    border-radius: 2px;
+    margin: auto;
 }
 
 .cardNome{
     font-size: 1.1rem;
     position: relative;
-    top: 30px;
-    color: white;
+    top: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .cardPreco{
     position: relative;
     top: 35px;
-    
+    color: red;
+    margin-top: 5px;
+    margin: auto;
+    width: 150px;
+    height: 28px;
+    line-height: 28px;
+    text-shadow: 0 0 40px #ff6969;
 }
 .cardDesc{
     position: relative;
-    top: 40px;
+    top: 45px;
+
 }
 .card img{
-    width: 85%;
+    width: 100%;
     height: 200px;
-    border-radius: 25px;
-    margin: 0 auto;
     position: relative;
-    top: 30px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    top: 20px;
+}
+
+#sobre{
+    background: var(--background);
+    display: flex;
+    font-family: var(--inter);
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+#titulo-sobre{
+    position: relative;
+    left: 700px;
+    margin: 0 auto;
+    font-size: 2.7rem;
+    color: var(--color2);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 2px;
+}
+#sobre p{
+    position: relative;
+    font-size: 1.6rem;
+    top: 150px;
+    padding: 15px;
+    margin-bottom: 300px;
+}
+
+span{
+    animation: spanAnimation 2s linear infinite;
+}
+
+#rodape{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    height: 120px;
+    width: 100%;
+    line-height: 120px;
+    box-shadow: 0 0 40px var(--color3);
 }
 
 
+@keyframes spanAnimation{
+    0%{
+        color: red;
+        
+    }
+    50%{
+        color: #ff6c6c;
+       
+    }
+    100%{
+        color: red;
+        
+    }
+}
+
+#username{
+    width: 280px;
+    margin: 0 auto;
+}
+
 /* Estilo para o campo de entrada e o label */
+
+#titulo1{
+    color: #000;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
 label {
     font-weight: bold;
     margin-right: 10px;
@@ -206,7 +289,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    margin: 5px;
+    margin: 15px;
     transition: background-color 0.3s ease;
 }
 
