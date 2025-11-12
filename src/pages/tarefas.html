@@ -8,9 +8,17 @@
   <title>Lista Tarefas</title>
 </head>
 
-<body>
-  <div id="container">
-  <h1 class="titulo1">LISTA DE TAREFAS</h1>
+<body id="bodyTarefas">
+    <header class="cabecalho" id="cabecalhoTarefas">
+        <img class="logo" src="../assets/logo.png">
+        <nav class="navegacaoMain">
+        <ul>
+            <li class="menu-header"><a href="../../index.html" class="menu">Home</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div id="container">
+  <h1 id="titulo1">LISTA DE TAREFAS</h1>
   <p><label for="task">TAREFA:</label>
     <input type="text" id="task" size="25px">
   </p>
@@ -18,11 +26,15 @@
     <button id="btnAdicionar" onclick="adcionaTarefa()">Adicionar Tarefa</button>
     <button id="btnRemover" onclick="removeTarefa()">Remover Tarefa</button>
   </div>
-</div>
+
 
   <p id="lista"></p>
 
+</div>
 
+<footer id="rodapeTarefas">
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
 
   <script src="../js/script.js"></script>
 </body>
