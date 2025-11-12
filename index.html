@@ -11,19 +11,17 @@
 </head>
 
 <body>
-<div id="container"> 
     <header id="cabecalho">
         <img id="logo" src="./src/assets/logo.png">
         <nav id="navegacaoMain">
         <ul>
             <li class="menu-header"><a href="index.html" class="menu">Home</a></li>
-            <li class="menu-header"><a href="" class="menu">Sobre</a></li>
+            <li class="menu-header"><a href="#sobre" class="menu">Sobre</a></li>
             <li class="menu-header"><a href="#titulo-fantasias" class="menu">Fantasias</a></li>
-            <li class="menu-header"><a href="" class="menu">Login  </a></li>
+            <li class="menu-header"><a href="" class="menu" id="login">Login  </a></li>
         </ul>
         </nav>
     </header>
-    <hr id="hrInicio">
     <div id="conteudo">
      <section class="banner">
         <div id="banner-conteudo">
@@ -40,9 +38,9 @@
         <article class="card">
             <div class="decorationTop"></div>
             <img class="cardImg" src="./src/assets/cardImg1.jpeg">
-            <hr class="cardHr">
             <h2 class="cardNome">Fantasia Adulto Thor Masculino</h2>
             <h3 class="cardPreco">R$255,00</h3>
+            <hr class="cardHr">
             <p class="cardDesc">Lorem ipsum dolor sit amet lalalaala </p>
             <div class="decorationBottom"></div>
         </article>
@@ -50,9 +48,9 @@
         <article class="card">
             <div class="decorationTop"></div>
             <img class="cardImg" src="./src/assets/cardImg2.jpeg">
-            <hr class="cardHr">
             <h2 class="cardNome">Fantasia Adulto Mulher Aranha</h2>
             <h3 class="cardPreco">R$153,00</h3>
+            <hr class="cardHr">
             <p class="cardDesc">Lorem ipsum dolor sit amet lalalaala </p>
             <div class="decorationBottom"></div>
         </article>
@@ -60,9 +58,9 @@
         <article class="card">
             <div class="decorationTop"></div>
             <img class="cardImg" src="./src/assets/cardImg3.jpeg">
-            <hr class="cardHr">
             <h2 class="cardNome">Fantasia Infantil Ultron Vingadores</h2>
             <h3 class="cardPreco">R$299,00</h3>
+            <hr class="cardHr">
             <p class="cardDesc">Lorem ipsum dolor sit amet lalalaala </p>
             <div class="decorationBottom"></div>
         </article>
@@ -70,9 +68,9 @@
         <article class="card">
             <div class="decorationTop"></div>
             <img class="cardImg" src="./src/assets/cardImg4.jpeg">
-            <hr class="cardHr">
-            <h2 class="cardNome">Fantasia Hulk Infantil</h2>
+          <h2 class="cardNome">Fantasia Hulk Infantil</h>
             <h3 class="cardPreco">R$250,00</h3>
+            <hr class="cardHr">
             <p class="cardDesc">Lorem ipsum dolor sit amet lalalaala </p>
             <div class="decorationBottom"></div>
         </article>
@@ -80,9 +78,9 @@
         <article class="card">
             <div class="decorationTop"></div>
             <img class="cardImg" src="./src/assets/cardImg5.jpeg">
-            <hr class="cardHr">
             <h2 class="cardNome">Fantasia Homem de Ferro Adulto</h2>
             <h3 class="cardPreco">R$204,00</h3>
+            <hr class="cardHr">
             <p class="cardDesc">Lorem ipsum dolor sit amet lalalaala </p>
             <div class="decorationBottom"></div>
         </article>
@@ -90,20 +88,54 @@
         <article class="card">
             <div class="decorationTop"></div>
             <img class="cardImg" src="./src/assets/cardImg6.jpeg">
-            <hr class="cardHr">
             <h2 class="cardNome">Fantasia Infantil Homem Formiga</h2>
             <h3 class="cardPreco">R$108,00</h3>
+            <hr class="cardHr">
             <p class="cardDesc">Lorem ipsum dolor sit amet lalalaala </p>
             <div class="decorationBottom"></div>
         </article>
     </section>
+     <section id="sobre">
+        <h1 id="titulo-sobre">Sobre</h1>
+        <p>Tudo começou com <span>Pedro e Felipe</span>, grandes fãs da Marvel que cresceram sonhando em vestir o manto de um herói. De criança criativa com capas feitas de lençol, eles viraran adultos com um sonho: criar um lugar onde qualquer pessoa pudesse viver a experiência de ser parte dos <span>Vingadores.</span>
+Foi assim que nasceu a <span>Fantasias Marvel.</span> Uma loja feita por <span>fãs e para fãs</span>, com fantasias realistas inspiradas nos maiores heróis da Marvel. O que começou em uma quintal virou um espaço onde <span>imaginação</span>e aventura se encontram. </p>
+    </section>
     </div>
-</div>
-    <footer class="rodape">
+    <footer id="rodape">
         <p>&copy; Todos os direitos reservados</p>
     </footer>
 
     <script src="./src/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+
+    document.getElementById('login').addEventListener('click', (event) => {
+    event.preventDefault()
+
+  Swal.fire({
+    title: 'Login',
+    html: `
+      <input type="text" id="username" class="swal2-input" placeholder="Usuário">
+      <input type="password" id="password" class="swal2-input" placeholder="Senha">
+    `,
+    confirmButtonText: 'Login',
+    focusConfirm: false,
+    preConfirm: () => {
+      const username = document.getElementById('username').value
+      const password = document.getElementById('password').value
+      if (!username || !password) {
+        Swal.showValidationMessage(`Please enter username and password`)
+      }
+      return { username, password }
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = './src/pages/tarefas.html'
+    }
+  })
+    })
+</script>
+
 
 </body>
 </html>
